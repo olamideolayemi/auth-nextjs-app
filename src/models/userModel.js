@@ -1,5 +1,4 @@
-import mongoose, { Mongoose } from "mongoose";
-import { type } from "os";
+import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
     username: {
@@ -27,10 +26,8 @@ const userSchema = new mongoose.Schema({
     forgotPasswordTokenExpiry: Date,
     verifyToken: String,
     verifyTokenExpiry: Date,
-
 })
 
-const User = Mongoose.models.users || mongoose.model
-("Users", userSchema);
+const User = mongoose.models.users || mongoose.model("users", userSchema);
 
 export default User;
