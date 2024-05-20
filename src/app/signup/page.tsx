@@ -13,6 +13,7 @@ export default function SignupPage() {
         password: "",
         username: "",
     })
+
     const [buttonDisabled, setButtonDisabled] = React.useState(false);
     const [loading, setLoading] = React.useState(false);
 
